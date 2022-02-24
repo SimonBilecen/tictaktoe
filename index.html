@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="deutsch">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,9 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <img class="game-over d-none" id="game_over" src="./img/game-over.png">
+    <button id="restart_button" class="restart_button d-none" onclick="restart()">Restart</button>
+
     <div class="player-panel">
         <div id="player_1">
             <img id="" class="" src="./img/circle.png">  Player 1
@@ -16,8 +19,17 @@
         <div class="player-inactive" id="player_2">
             <img id = ""class="" src="./img/cross.png">Player 2
         </div>
-
     </div>
+
+    <div id ="line-1"class="horizontal-line" style = "top: 255px;"></div>
+    <div id ="line-2"class="horizontal-line" style = "top: 400px;"></div>
+    <div id ="line-3"class="horizontal-line" style = "top: 532px;"></div> 
+    <div id ="line-4"class="horizontal-line make-vertical" style = "top: 400px; left: 105px;"></div> 
+    <div id ="line-5"class="horizontal-line make-vertical" style = "top: 400px;"></div> 
+    <div id ="line-6"class="horizontal-line make-vertical" style = "top: 400px; right: 105px;"></div> 
+    <div id ="line-7"class="horizontal-line" style = "top: 400px; transform: rotate(45deg) scaleX(0.0);"></div> 
+    <div id ="line-8"class="horizontal-line" style = "top: 400px; transform: rotate(-45deg) scaleX(0.0);"></div> 
+
     <table>
         <tr>
             <td onclick = "fill_shape(0)"><img id="circle_0" class="shape d-none" src="./img/circle.png"><img id = "cross_0"class="shape d-none" src="./img/cross.png"></td>

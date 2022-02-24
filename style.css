@@ -76,3 +76,57 @@ tr td:last-child {
 .d-none {
     display: none;
 }
+
+.horizontal-line {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 10px;
+    width: 350px;
+    position: absolute;
+    transform: scaleX(0.0);
+    transform: scaleY(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+}
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+.game-over {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    animation: zoomin 225ms ease-in-out;
+}
+
+@keyframes zoomin {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart_button {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    z-index: 2;   
+    background-color: rgb(24, 54, 145);
+    width: 300px;
+    height: 80px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom: 60px;
+}
+
+.restart_button:hover {
+    background-color: blue;
+}
+    
